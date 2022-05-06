@@ -1,0 +1,13 @@
+// Nodemodules
+@import "~bootstrap/scss/bootstrap.scss";
+
+// Font
+@import '~@fontsource/montserrat/index.css'; 
+@import '~@fontsource/montserrat/700.css';
+
+// Styles
+@import "./vars.scss";
+
+body{
+    font-family: $main-font;
+}
