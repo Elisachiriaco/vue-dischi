@@ -1,5 +1,6 @@
 <template>
 <section class="container">
+    <app-loader v-if="loading"/>
     <!-- author: (…)
         genre: (…)
         poster: (…)
@@ -16,19 +17,21 @@
 </template>
 
 <script>
+import AppLoader from './AppLoader.vue'
 import axios from 'axios';
 import AppCard from './AppCard.vue'
 
 export default {
     name: "AppMain",
     components: { 
+        AppLoader,
         AppCard
     },
     data(){
         return {
             songList:[],
             api:'https://flynn.boolean.careers/exercises/api/array/music',
-            loading:false
+            loading: true,
         }
     },
     mounted(){
@@ -39,12 +42,13 @@ export default {
             console.log(this.songList)
         }).catch((error) => {
             console.log(error)
+            this.loading = false;
         })
     } 
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "./src/style/generals.scss";
 
 section{
