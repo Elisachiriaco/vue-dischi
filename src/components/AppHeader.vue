@@ -1,6 +1,6 @@
 <template>
   <header>
-
+    <img src="../assets/logo.png" alt="">
   </header>
 </template>
 
@@ -19,5 +19,9 @@ export default {
 header{
   background-color: $bg-header;
   height: 60px;
+  img{
+    padding: 10px;
+    width: 5%;
+  }
 }
 </style>

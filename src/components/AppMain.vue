@@ -6,7 +6,7 @@
         title: (…)
         year: (…) -->
     <div class="row">
-        <div class="col-6 col-md-2"
+        <div class="col-6 col-md-2 m-3"
         v-for="(song, index) in songList" :key="index">
         <app-card :item="song"/>
         </div>
@@ -47,4 +47,7 @@ export default {
 <style lang="scss" scoped>
 @import "./src/style/generals.scss";
 
+section{
+    padding: 50px 0px;
+}
 </style>
