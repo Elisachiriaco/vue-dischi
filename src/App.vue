@@ -23,7 +23,5 @@ export default {
 <style lang="scss">
 @import "./style/generals.scss";
 @import "./style/vars.scss";
-main{
-  background-color: $bg-main;
-}
+
 </style>

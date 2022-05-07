@@ -19,22 +19,23 @@ export default {
 <style lang="scss" scoped>
 @import "./src/style/generals.scss";
 .card-container{
-    padding: 14px;
+    padding: 12px;
     background-color: $bg-header;
-    height: 350px;
+    height: 300px;
     text-align: center;
     img{
-    width:100%;
+    width:90%;
     }
     h4{
         color: $text-color;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
         padding-top: 5px;
     }
 }
 p{
     color: $subtitle-color;
+    font-size: 14px;
 }
 </style>

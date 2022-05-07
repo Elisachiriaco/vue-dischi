@@ -6,8 +6,8 @@
         poster: (…)
         title: (…)
         year: (…) -->
-    <div class="row">
-        <div class="col-6 col-md-2 m-3"
+    <div class="row justify-content-center p-4">
+        <div class="col-6 col-sm-4 col-md-2 m-2"
         v-for="(song, index) in songList" :key="index">
         <app-card :item="song"/>
         </div>
@@ -35,7 +35,8 @@ export default {
         }
     },
     mounted(){
-        this.loading = true;
+        setTimeout(()=>{
+            this.loading = true;
             axios.get(this.api).then((res)=>{
             this.songList = res.data.response;
             this.loading = false
@@ -44,14 +45,12 @@ export default {
             console.log(error)
             this.loading = false;
         })
-    } 
+     },1000)
+    }
 }
 </script>
 
 <style lang="scss">
 @import "./src/style/generals.scss";
 
-section{
-    padding: 50px 0px;
-}
 </style>
