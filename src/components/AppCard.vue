@@ -16,8 +16,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "./src/style/generals.scss";
+<style lang="scss">
+@import './src/style/vars.scss';
+
 .card-container{
     padding: 12px;
     background-color: $bg-header;
